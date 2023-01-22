@@ -41,14 +41,6 @@
         "title": "❌ Close"
       },
       {
-        "command": "Go Back",
-        "title": "👈"
-      },
-      {
-        "command": "Go Forward",
-        "title": "👉"
-      },
-      {
         "command": "workbench.action.toggleZenMode",
         "title": "□ Zen"
       },
@@ -62,11 +54,11 @@
       },
       {
         "command": "editor.foldAll",
-        "title": "⇠ FoldAll"
+        "title": "⏫ Fold"
       },
       {
         "command": "editor.unfoldAll",
-        "title": "⇢ UnFold"
+        "title": "⏬ UnFold"
       },
       {
         "command": "workbench.action.toggleSidebarVisibility",
@@ -75,6 +67,10 @@
       {
         "command": "workbench.action.terminal.toggleTerminal",
         "title": "Terminal"
+      },
+      {
+        "command": "lxander.touchbar.enableFocusMode",
+        "title": "🧘‍♀️ Focus"
       },
       {
         "command": "editor.action.copyLinesDownAction",
@@ -106,12 +102,36 @@
         "icon": "./images/extensions-activity-bar.png"
       },
       {
-        "command": "extensionTouchBar.night",
+        "command": "lxander.touchbar.night",
         "title": "Night"
       },
       {
-        "command": "extensionTouchBar.day",
+        "command": "lxander.touchbar.day",
         "title": "Day"
+      },
+      {
+        "command": "lxander.touchbar.syncBranch",
+        "title": "Git:Sync"
+      },
+      {
+        "command": "lxander.touchbar.gitcommit",
+        "title": "Git:Commit"
+      },
+      {
+        "command": "lxander.touchbar.gitpush",
+        "title": "Git:Push"
+      },
+      {
+        "command": "lxander.touchbar.gitpull",
+        "title": "Git:Pull"
+      },
+      {
+        "command": "lxander.touchbar.checkoutTo",
+        "title": "Git:Checkout"
+      },
+      {
+        "command": "lxander.touchbar.stageAll",
+        "title": "Git:Stage"
       }
     ],
     "menus": {
@@ -135,6 +155,11 @@
           "command": "workbench.action.terminal.toggleTerminal",
           "group": "group_1",
           "when": "config.touchBar.focusCode"
+        },
+        {
+          "command": "lxander.touchbar.enableFocusMode",
+          "group": "group_1",
+          "when": "config.touchBar.focusMode"
         },
         {
           "command": "editor.action.rename",
@@ -177,6 +202,36 @@
           "when": "config.touchBar.copyLinesDownAction"
         },
         {
+          "command": "lxander.touchbar.syncBranch",
+          "when": "config.touchBar.syncBranch",
+          "group": "activityBar"
+        },
+        {
+          "command": "lxander.touchbar.gitcommit",
+          "when": "config.touchBar.gitcommit",
+          "group": "activityBar"
+        },
+        {
+          "command": "lxander.touchbar.gitpush",
+          "when": "config.touchBar.gitpush",
+          "group": "activityBar"
+        },
+        {
+          "command": "lxander.touchbar.gitpull",
+          "when": "config.touchBar.gitpull",
+          "group": "activityBar"
+        },
+        {
+          "command": "lxander.touchbar.checkoutTo",
+          "when": "config.touchBar.checkoutTo",
+          "group": "activityBar"
+        },
+        {
+          "command": "lxander.touchbar.stageAll",
+          "when": "config.touchBar.stageAll",
+          "group": "activityBar"
+        },
+        {
           "command": "workbench.files.action.focusFilesExplorer",
           "when": "config.touchBar.showActivityBar && config.touchBar.showExplorer",
           "group": "activityBar"
@@ -202,22 +257,12 @@
           "group": "activityBar"
         },
         {
-          "command": "Go Back",
-          "group": "activityBar",
-          "when": "config.touchBar.showGoBack"
-        },
-        {
-          "command": "Go Forward",
-          "group": "activityBar",
-          "when": "config.touchBar.showGoForward"
-        },
-        {
-          "command": "extensionTouchBar.night",
+          "command": "lxander.touchbar.night",
           "when": "config.touchBar.themeToggle",
           "group": "themeToggle"
         },
         {
-          "command": "extensionTouchBar.day",
+          "command": "lxander.touchbar.day",
           "when": "config.touchBar.themeToggle",
           "group": "themeToggle"
         }
@@ -237,16 +282,6 @@
           "default": false,
           "description": "Enables button «⬓ Term»"
         },
-        "touchBar.showGoBack": {
-          "type": "boolean",
-          "default": true,
-          "description": "Go Back"
-        },
-        "touchBar.showGoForward": {
-          "type": "boolean",
-          "default": true,
-          "description": "Go Forward"
-        },
         "touchBar.rename": {
           "type": "boolean",
           "default": true,
@@ -261,6 +296,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable Focus Code"
+        },
+        "touchBar.focusMode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Focus Mode"
         },
         "touchBar.toggleZenMode": {
           "type": "boolean",
@@ -326,6 +366,36 @@
           "type": "boolean",
           "default": false,
           "description": "Enables button «Debug» of Activity bar"
+        },
+        "touchBar.syncBranch": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable git sync"
+        },
+        "touchBar.gitcommit": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable git commit"
+        },
+        "touchBar.gitpush": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable git push"
+        },
+        "touchBar.gitpull": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable git pull"
+        },
+        "touchBar.checkoutTo": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable git checkoutTo"
+        },
+        "touchBar.stageAll": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable git stage"
         }
       }
     }
