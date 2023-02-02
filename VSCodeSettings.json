@@ -75,7 +75,6 @@
   "dart.cliConsole": "terminal",
   "python.defaultInterpreterPath": "/usr/local/bin/python3",
   "dart.flutterSdkPath": "/Users/adarsh_mishra/flutter",
-  "rapidapi.terminalLink.enabled": false,
   "editor.tabSize": 2,
   "window.title": "${folderName}${dirty}${separator}${activeFolderMedium}",
   "editor.inlineSuggest.enabled": true,
@@ -97,10 +96,6 @@
     "workbench.action.navigateBack",
     "workbench.action.navigateForward"
   ],
-  "touchBar.copyLinesDownAction": false,
-  "touchBar.organizeImports": true,
-  "touchBar.toggleZenMode": false,
-  "touchBar.rename": false,
   "window.restoreFullscreen": true,
   "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "yarn",
@@ -108,13 +103,11 @@
   "git.confirmSync": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.wrapTabs": true,
-  "githubPullRequests.fileListLayout": "flat",
   "editor.renderWhitespace": "all",
   "git.enableSmartCommit": true,
   "workbench.panel.opensMaximized": "always",
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
-  "githubPullRequests.pullBranch": "never",
   "git.allowForcePush": true,
   "git.pruneOnFetch": true,
   "git.showPushSuccessNotification": true,
@@ -189,10 +182,6 @@
     "other": true,
     "comments": false,
     "strings": true
-  },
-  "console-ninja.toolsToEnableSupportAutomaticallyFor": {
-    "live-server": true,
-    "live-preview": true
   },
   "git.mergeEditor": true,
   "mergeEditor.diffAlgorithm": "smart",
