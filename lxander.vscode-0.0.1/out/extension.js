@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require("vscode");
+const process = require('child_process');
 const userConfig = vscode.workspace.getConfiguration();
 const getSettings = () => {
     let extensionConfig = vscode.workspace.getConfiguration('touchBar');
@@ -10,6 +11,10 @@ const getSettings = () => {
         night: extensionConfig.nightTheme,
         day: extensionConfig.dayTheme
     };
+};
+
+const fetchLocalIP = () => {
+    return process.execSync('ipconfig getifaddr en0').toString().trim();
 };
 
 const showInfo = (infoMsg) =>
@@ -21,6 +26,7 @@ function activate(context) {
     let disposable = vscode.workspace.onDidChangeConfiguration(getSettings, this);
     let themeKey = 'workbench.colorTheme';
     let settings = getSettings();
+    vscode.window.showInformationMessage('Welcome to VS Code. Enjoy your stay!',);
     vscode.commands.registerCommand('lxander.vscode.touchBar.night', () => {
         userConfig.update(themeKey, settings.night, true);
     });
@@ -62,7 +68,22 @@ function activate(context) {
         vscode.commands.executeCommand('workbench.action.closeSidebar');
         vscode.commands.executeCommand('workbench.action.closeAuxiliaryBar');
     });
-    context.subscriptions.push(disposable, toggleFocusMode, syncBranch, commit, push, pull, closeGit, checkout, stageAll);
+
+    const copyLocalIP = vscode.commands.registerCommand('lxander.vscode.touchBar.copyLocalIP', () => {
+        vscode.env.clipboard.writeText(fetchLocalIP());
+        showInfo("Local IP copied to clipboard");
+    });
+
+    const statusBarItem = vscode.window.createStatusBarItem('lxander.vscode.localIP', vscode.StatusBarAlignment.Left, Number.MAX_SAFE_INTEGER);
+    const localIP = fetchLocalIP();
+    statusBarItem.text = `Local IP ${localIP}`;
+    statusBarItem.backgroundColor = new vscode.ThemeColor('#0F52BA');
+    statusBarItem.color = new vscode.ThemeColor('#FFFFFF');
+    statusBarItem.tooltip = 'Local IP Address'
+    statusBarItem.command = 'lxander.vscode.touchBar.copyLocalIP';
+    context.subscriptions.push(disposable, toggleFocusMode, syncBranch, commit, push, pull, checkout, stageAll, copyLocalIP, statusBarItem);
+
+    statusBarItem.show();
 }
 exports.activate = activate;
 // this method is called when your extension is deactivated
