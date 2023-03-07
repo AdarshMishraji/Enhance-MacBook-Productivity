@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const { window, workspace, commands, env, ProgressLocation } = require("vscode");
+const { window, workspace, commands, env, ProgressLocation, } = require("vscode");
 
 const processWithProgress = async (title, process) => {
   await window.withProgress({
@@ -14,6 +14,9 @@ const processWithProgress = async (title, process) => {
 
 const showInfo = (message) =>
   window.showInformationMessage(message);
+
+const showError = (message) =>
+  window.showErrorMessage(message);
 
 const showConfirmationDialog = (message, ...options) =>
   window.showInformationMessage(message, { modal: true }, ...options);
@@ -37,19 +40,17 @@ const showInputBox = async (title, prompt, { errorMessage, minLength }) =>
 const copyToClipboard = (text) =>
   env.clipboard.writeText(text);
 
-
-const getCurrentActiveRootDirectory = () => {
+const getActiveCwd = () => {
   const workspaceFolders = workspace.workspaceFolders;
 
   if (workspaceFolders === undefined || workspaceFolders.length == 0) {
     return null;
   }
-  if (workspaceFolders.length == 1) {
+
+  if (workspaceFolders.length == 1 || window.activeTextEditor === undefined) {
     return workspaceFolders[0].uri.fsPath;
   }
-  if (window.activeTextEditor === undefined) {
-    return workspaceFolders[0].uri.fsPath;
-  }
+
   const currentDocument = window.activeTextEditor.document.uri.fsPath;
   const folder = workspaceFolders.find(w => currentDocument.startsWith(w.uri.fsPath));
 
@@ -59,15 +60,18 @@ const getCurrentActiveRootDirectory = () => {
   return folder.uri.fsPath;
 };
 
+const getCwdName = (cwd) => cwd.split('/').pop();
 
 module.exports = {
   processWithProgress,
   showInfo,
+  showError,
   showConfirmationDialog,
   registerCommand,
   executeCommand,
   showInputBox,
   copyToClipboard,
-  getCurrentActiveRootDirectory,
+  getActiveCwd,
+  getCwdName,
   getConfirmationInBoolean
 };

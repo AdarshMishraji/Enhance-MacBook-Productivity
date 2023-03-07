@@ -5,7 +5,7 @@ const { exec } = require('child_process');
 
 const promisifiedExec = (command, options) => {
   return new Promise((resolve, reject) => {
-    exec(command, options, (error, stdout, stderr) => {
+    exec(command, options, (error, stdout) => {
       if (error) {
         reject(error);
       }

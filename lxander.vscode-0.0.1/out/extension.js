@@ -14,11 +14,11 @@ const { toggleFocusMode } = require("./controllers/misc");
 function activate(context) {
     showInfo('Welcome to VS Code. Enjoy your stay!');
 
-    registerCommand(context, "lxander.vscode.touchBar.gitcommit", operationWithMetadata(commit));
-    registerCommand(context, "lxander.vscode.touchBar.gitpull", operationWithMetadata(pull));
-    registerCommand(context, "lxander.vscode.touchBar.gitpush", operationWithMetadata(push));
-    registerCommand(context, "lxander.vscode.touchBar.stashAll", operationWithMetadata(stashAll));
-    registerCommand(context, "lxander.vscode.touchBar.stashLatestApply", operationWithMetadata(stashLatestApply));
+    registerCommand(context, "lxander.vscode.touchBar.gitcommit", operationWithMetadata(commit, { isGitOperation: true }));
+    registerCommand(context, "lxander.vscode.touchBar.gitpull", operationWithMetadata(pull, { isGitOperation: true }));
+    registerCommand(context, "lxander.vscode.touchBar.gitpush", operationWithMetadata(push, { isGitOperation: true }));
+    registerCommand(context, "lxander.vscode.touchBar.stashAll", operationWithMetadata(stashAll, { isGitOperation: true }));
+    registerCommand(context, "lxander.vscode.touchBar.stashLatestApply", operationWithMetadata(stashLatestApply, { isGitOperation: true }));
     registerCommand(context, 'lxander.vscode.touchBar.enableFocusMode', toggleFocusMode);
 
     localIPStatusBarItem(context).show();

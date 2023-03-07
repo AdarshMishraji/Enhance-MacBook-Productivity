@@ -2,21 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 
 const { gitStashLatest, getStashList } = require("../../helpers/git");
-const { getConfirmationInBoolean, showInfo } = require("../../helpers/vscode");
+const { getConfirmationInBoolean, showError } = require("../../helpers/vscode");
 
-const shouldApplyLatestStash = (currentRepoName) => getConfirmationInBoolean(`Are you sure you want to apply latest stash for ${currentRepoName}?`);
+const shouldApplyLatestStash = (cwdName) => getConfirmationInBoolean(`Are you sure you want to apply latest stash for ${cwdName}?`);
 
-const stashLatestApply = async ({ cwd, currentRepoName }) => {
+const stashLatestApply = async ({ cwd, cwdName }) => {
   const isStashExists = (await getStashList(cwd)).length > 0;
   if (isStashExists) {
-    const confirmation = await shouldApplyLatestStash(currentRepoName);
+    const confirmation = await shouldApplyLatestStash(cwdName);
     if (confirmation) {
       gitStashLatest(cwd);
     }
   } else {
-    showInfo("There are no stashes to apply");
+    showError("There are no stashes to apply");
   }
-}
+};
 
 module.exports = {
   stashLatestApply,

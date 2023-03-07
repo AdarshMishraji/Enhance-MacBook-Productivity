@@ -1,9 +1,9 @@
 {
-  "name": "lxander-vscode",
+  "name": "lxander.vscode",
   "displayName": "Lxander VS Code",
   "description": "VS Code useful extensions",
   "version": "0.0.1",
-  "publisher": "lxander",
+  "publisher": "Lxander Corvus",
   "engines": {
     "vscode": "^1.74.3"
   },

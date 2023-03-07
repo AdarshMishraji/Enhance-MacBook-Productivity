@@ -6,8 +6,6 @@ const { processWithProgress, showInfo } = require('./vscode');
 
 const getCurrentGitBranch = (cwd) => promisifiedExec('git rev-parse --abbrev-ref HEAD', { cwd });
 
-const getCurrentRepoName = (cwd) => cwd.split('/').pop();
-
 const gitCommit = (cwd, message, stageAll = false) => {
   if (message === undefined) {
     return;
@@ -53,9 +51,17 @@ const getUnpushedCommits = (cwd, currentBranch) => promisifiedExec(`git --no-pag
 
 const getStashList = async (cwd) => promisifiedExec('git --no-pager stash list', { cwd });
 
+const isGitInitialized = async (cwd) => {
+  try {
+    const res = await promisifiedExec('git rev-parse --is-inside-work-tree', { cwd });
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
 module.exports = {
   getCurrentGitBranch,
-  getCurrentRepoName,
   gitCommit,
   gitPush,
   gitPull,
@@ -64,5 +70,6 @@ module.exports = {
   getUnstagedChanges,
   getUncommitedChanges,
   getUnpushedCommits,
-  getStashList
+  getStashList,
+  isGitInitialized,
 };
