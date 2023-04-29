@@ -363,6 +363,11 @@
         "label": "Lxander Dark Theme V2",
         "uiTheme": "vs-dark",
         "path": "./themes/v2.theme.json"
+      },
+      {
+        "label": "Lxander Dark Theme V3",
+        "uiTheme": "vs-dark",
+        "path": "./themes/v3.theme.json"
       }
     ]
   },
