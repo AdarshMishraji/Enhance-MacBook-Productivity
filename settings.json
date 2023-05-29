@@ -1,0 +1,317 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "editor.fontWeight": "500",
+  "terminal.integrated.fontWeight": "bold",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#000000",
+    "terminal.foreground": "#ccccff",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBlue": "#00a1f9",
+    "terminal.ansiCyan": "#8BA59B",
+    "terminal.ansiGreen": "#95C085",
+    "terminal.ansiMagenta": "#8F4673",
+    "terminal.ansiRed": "#FB543F",
+    "terminal.ansiWhite": "#A89984",
+    "terminal.ansiYellow": "#FAC03B",
+    "terminal.ansiBrightBlack": "#444444",
+    "terminal.ansiBrightBlue": "#006678",
+    "terminal.ansiBrightCyan": "#8BA59B",
+    "terminal.ansiBrightGreen": "#237e02",
+    "terminal.ansiBrightMagenta": "#8F4673",
+    "terminal.ansiBrightRed": "#FB543F",
+    "terminal.ansiBrightWhite": "#FDF4C1",
+    "terminal.ansiBrightYellow": "#FAC03B"
+  },
+  "dart.enableSnippets": true,
+  "dart.hotReloadOnSave": "allIfDirty",
+  "dart.enableSdkFormatter": true,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false,
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+  },
+  "explorer.fileNesting.patterns": {
+    "*.dart": "${capture}.g.dart, ${capture}.freezed.dart"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "redhat.telemetry.enabled": false,
+  "emulator.androidColdBoot": true,
+  "emulator.emulatorPathWindows": "C:\\Users\\Adarsh_Mishra\\AppData\\Local\\Android\\Sdk\\emulator",
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+  "debug.confirmOnExit": "always",
+  "git.requireGitUserConfig": false,
+  "files.exclude": {
+    "**/.git": true
+    // "node_modules": true,
+  },
+  "dartImport.fixOnSave": true,
+  "dartImport.showInfoMessages": false,
+  "dartImport.showErrorMessages": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  },
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.showLinkHover": true,
+  "terminal.integrated.windowsEnableConpty": true,
+  "git.autofetch": true,
+  "git.autofetchPeriod": 86400,
+  "dart.previewFlutterUiGuides": true,
+  "dart.cliConsole": "terminal",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "dart.flutterSdkPath": "/Users/adarsh_mishra/fvm/versions/3.7.12",
+  "editor.tabSize": 2,
+  "window.title": "${folderName}${dirty}${separator}${activeFolderMedium}",
+  "editor.inlineSuggest.enabled": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.parameterHints.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "editor.fontLigatures": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true,
+    "go": true,
+    "dart": true
+  },
+  "keyboard.touchbar.ignored": [
+    "workbench.action.debug.start",
+    "workbench.action.debug.run",
+    "workbench.action.navigateBack",
+    "workbench.action.navigateForward"
+  ],
+  "window.restoreFullscreen": true,
+  "eslint.packageManager": "yarn",
+  "editor.rename.enablePreview": false,
+  "git.confirmSync": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.wrapTabs": true,
+  "editor.renderWhitespace": "all",
+  "git.enableSmartCommit": true,
+  "workbench.panel.opensMaximized": "always",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "git.allowForcePush": true,
+  "git.pruneOnFetch": true,
+  "git.showPushSuccessNotification": true,
+  "git.terminalGitEditor": true,
+  "errorLens.enableOnDiffView": true,
+  "sonarlint.disableTelemetry": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.format": "${author, }${agoOrDate}${ • message|50?} - (${pullRequest} - (${pullRequestState}))",
+  "gitlens.statusBar.alignment": "left",
+  "workbench.list.horizontalScrolling": true,
+  "sonarlint.rules": {
+    "javascript:S3358": {
+      "level": "off"
+    },
+    "java:S106": {
+      "level": "off"
+    },
+    "java:S2142": {
+      "level": "off"
+    },
+    "typescript:S6481": {
+      "level": "off"
+    }
+  },
+  "cSpell.userWords": [
+    "Adarsh",
+    "autofocus",
+    "backoff",
+    "bson",
+    "Cupertino",
+    "envconfig",
+    "Getx",
+    "initialise",
+    "iterm",
+    "lxander",
+    "middlewares",
+    "Mishra",
+    "monetisation",
+    "netbanking",
+    "Nunito",
+    "Razorpay",
+    "setex",
+    "Signin",
+    "Signout",
+    "signup",
+    "uncommited",
+    "Unpushed",
+    "Unstaged",
+    "USERID",
+    "Vpas",
+    "yellowclass"
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  },
+  "editor.stickyTabStops": true,
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiBlue",
+  "terminal.integrated.tabs.hideCondition": "singleGroup",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[proto3]": {
+    "editor.defaultFormatter": "zxh404.vscode-proto3"
+  },
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "editor.emptySelectionClipboard": false,
+  "sonarlint.pathToNodeExecutable": "/Users/adarsh_mishra/.nvm/versions/node/v16.20.0/bin/node",
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "gitlens.rebase"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "mdb.sendTelemetry": false,
+  "mdb.confirmRunAll": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.tree.renderIndentGuides": "onHover",
+  "window.confirmBeforeClose": "always",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
+  "mdb.defaultLimit": 500,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "git.mergeEditor": true,
+  "mergeEditor.diffAlgorithm": "smart",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "workbench.editor.scrollToSwitchTabs": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    // "source.organizeImports": true,
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "lxander.vscode.touchBar.debug": false,
+  "lxander.vscode.touchBar.extensions": false,
+  "lxander.vscode.touchBar.foldAll": true,
+  "lxander.vscode.touchBar.organizeImports": true,
+  "lxander.vscode.touchBar.scm": false,
+  "lxander.vscode.touchBar.search": false,
+  "lxander.vscode.touchBar.unfoldAll": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "switch:command"
+  ],
+  "git.openAfterClone": "always",
+  "git.optimisticUpdate": false,
+  "git.useCommitInputAsStashMessage": true,
+  "application.shellEnvironmentResolutionTimeout": 60,
+  "lxander.vscode.touchBar.rename": false,
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "rust-analyzer.cargo.buildScripts.invocationLocation": "root",
+  "rust-analyzer.debug.openDebugPane": true,
+  "rust-analyzer.diagnostics.previewRustcOutput": true,
+  "workbench.productIconTheme": "fluent-icons",
+  "lxander.vscode.touchBar.toggleZenMode": false,
+  "Notes.notesLocation": "/Users/adarsh_mishra/Documents/Notes",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[go.mod]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "go.autocompleteUnimportedPackages": true,
+  "go.lintOnSave": "file",
+  "editor.linkedEditing": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "search.actionsPosition": "auto",
+  "search.defaultViewMode": "tree",
+  "search.quickOpen.history.filterSortOrder": "recency",
+  "search.smartCase": true,
+  "search.showLineNumbers": true,
+  "editor.stickyScroll.defaultModel": "foldingProviderModel",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "githubPullRequests.pullBranch": "never",
+  "git.openRepositoryInParentFolders": "never",
+  "eslint.debug": true,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+  "terminal.integrated.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.scrollback": 10000,
+  "docker.commands.attach": "${containerCommand} exec -it ${containerId} zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "npm.enableRunFromFolder": true,
+  "npm.packageManager": "yarn",
+  "npm.scriptExplorerAction": "run",
+  "errorLens.excludeBySource": [
+    "compiler(UndeclaredName)"
+  ],
+  "rapidapi.terminalLink.enabled": false,
+  "rest-client.showResponseInDifferentTab": true,
+  "rest-client.requestNameAsResponseTabTitle": true,
+  "go.lintFlags": [
+    "--fast"
+  ],
+  "dart.flutterCreateAndroidLanguage": "java",
+  "dart.flutterCreateIOSLanguage": "objc",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": "active",
+  "workbench.colorTheme": "Lxander Dark Theme V3"
+}

@@ -1,0 +1,137 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+shift+f",
+    "command": "extension.saveText"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-extension.saveText"
+  },
+  {
+    "key": "shift+cmd+a shift+cmd+enter",
+    "command": "mdb.runAllPlaygroundBlocks",
+    "when": "editorLangId == 'mongodb'"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-mdb.runAllPlaygroundBlocks",
+    "when": "editorLangId == 'mongodb'"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "mdb.runSelectedPlaygroundBlocks",
+    "when": "editorLangId == 'mongodb'"
+  },
+  {
+    "key": "alt+cmd+s",
+    "command": "-mdb.runSelectedPlaygroundBlocks",
+    "when": "editorLangId == 'mongodb'"
+  },
+  {
+    "key": "shift+alt+e",
+    "command": "flutter.launchEmulator"
+  },
+  {
+    "key": "ctrl+shift+cmd+f",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "cmd+k cmd+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+shift+cmd+u",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+cmd+space",
+    "command": "extension.enableFocusMode"
+  },
+  {
+    "key": "ctrl+cmd+i",
+    "command": "workbench.action.closePanel"
+  },
+  {
+    "key": "ctrl+cmd+space",
+    "command": "workbench.action.terminal.runRecentCommand",
+    "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.terminal.runRecentCommand",
+    "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+space",
+    "command": "workbench.action.terminal.runRecentCommand",
+    "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled"
+  },
+  {
+    "key": "ctrl+alt+r",
+    "command": "-workbench.action.terminal.runRecentCommand",
+    "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "mdb.runSelectedPlaygroundBlocks",
+    "when": "mdb.isPlayground"
+  },
+  {
+    "key": "alt+cmd+s",
+    "command": "-mdb.runSelectedPlaygroundBlocks",
+    "when": "mdb.isPlayground"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "debug.openView",
+    "when": "!debuggersAvailable"
+  },
+  {
+    "key": "f5",
+    "command": "-debug.openView",
+    "when": "!debuggersAvailable"
+  },
+  {
+    "key": "ctrl+cmd+k",
+    "command": "workbench.debug.panel.action.clearReplAction"
+  },
+  {
+    "key": "ctrl+tab ctrl+`",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+  {
+    "key": "shift+cmd+y",
+    "command": "-workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  }
+]
