@@ -108,7 +108,6 @@ export PATH="$PATH:$HOME/flutter/bin"
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
-export GITHUB_TOKEN=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
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
